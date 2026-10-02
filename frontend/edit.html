@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Editar Credencial</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body style="background-color: rgb(240,243,250);">
+  <div class="container mt-5 text-center">
+    <h1>Editar Credencial</h1>
+    <div class="mb-3"><label>Plataforma:</label><input type="text" id="Plataforma" class="form-control"></div>
+    <div class="mb-3"><label>Usuario:</label><input type="text" id="usuario" class="form-control"></div>
+    <div class="mb-3"><label>Clave:</label><input type="text" id="clave" class="form-control"></div>
+    <button class="btn btn-info" onclick="modificar(idActual)">Actualizar</button>
+    <button class="btn btn-warning" onclick="location.href='index.html'">Regresar</button>
+  </div>
+  <script src="app.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const idActual = params.get('id');
+    consulta_individual(idActual);
+  </script>
+</body>
+</html>
